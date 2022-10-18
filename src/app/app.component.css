@@ -24,6 +24,7 @@ h3{
       border-width: 2px;
 }
 input{
+  margin-top: 1rem;
   width: 100%;
   border-radius: 30px;
   background-color: #000000;
@@ -52,7 +53,12 @@ input:focus {
   align-items: center;
   justify-content: space-around;
 }
-.main{
-
+#phone_list{
+  height: 75vh;
+ overflow-y: scroll;
 }
-
+.heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

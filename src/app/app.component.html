@@ -1,25 +1,30 @@
 <body>
   <div class="containter">
-    <h3>Contacts</h3>
+
     <hr class="line">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6" id="phone_list">
+        <div class="heading">
+          <h3>Contacts</h3>
+          <h3>Add</h3></div>
         <div class="class_right">
-          <input type="text" placeholder="Serch 478 contacts">
-            <div class="contact">
+          <input type="text" placeholder="Serch {{totalPhone}} contacts"   [(ngModel)]="filteredString">
+            <div class="contact" *ngFor="let phone of allPhone| phoneFilter:filteredString">
               <div id="profileImage"></div>
-              <p>Evans</p>
-               <p>0798288410</p>
+              <p>{{phone.name}}</p>
+               <p>{{phone.phone}}</p>
             </div>
         </div>
       </div>
       <div class="col-md-6">
         <div class="class_left">
-          <p>hello 3</p>
+          <p>Detail section..</p>
         </div>
       </div>
     </div>
   </div>
 </body>
+
+
 
 
